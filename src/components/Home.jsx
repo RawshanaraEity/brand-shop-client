@@ -1,10 +1,15 @@
+import Banner from "./Banner";
+import BrandsCategory from "./Brands/BrandsCategory";
+import Footer from "./Footer";
 
 
 
 const Home = () => {
     return (
         <div>
-            {/* <NavBar></NavBar> */}
+            <Banner></Banner>
+            <BrandsCategory></BrandsCategory>
+            <Footer></Footer>
         </div>
     );
 };
