@@ -18,7 +18,7 @@ const Navbar = () => {
       <li className="text-base font-medium">
         {" "}
         <NavLink
-          to="/addProduct"
+          to="/products"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "bg-red-600 text-white" : ""
           }

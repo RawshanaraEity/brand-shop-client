@@ -1,8 +1,41 @@
 const AddProduct = () => {
+
+    const handleAddProduct = e =>{
+        e.preventDefault()
+        const form = e.target;
+        const photo = form.photo.value;
+        const name = form.name.value;
+        const type = form.type.value;
+        const price = form.price.value;
+        const description = form.description.value;
+        const rating = form.rating.value;
+        // console.log(photo, name, type, price, description, rating)
+
+        const myData = {
+            photo,name,type,price,description,rating
+        }
+        console.log(myData)
+
+        fetch('http://localhost:5000/products', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(myData)
+        })
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+        })
+
+    }
+
+
+
   return (
     <div className="py-5 bg-red-100">
       <h2 className="text-center text-5xl font-semibold">Add More Products</h2>
-      <form className="space-y-5 md:w-3/4 lg:w-2/3 mx-auto py-10">
+      <form onSubmit={handleAddProduct} className="space-y-5 md:w-3/4 lg:w-2/3 mx-auto py-10">
         <div className="flex gap-5">
           <input
             className="input w-full"
