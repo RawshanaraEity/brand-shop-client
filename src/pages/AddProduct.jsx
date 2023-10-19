@@ -4,15 +4,15 @@ const AddProduct = () => {
         e.preventDefault()
         const form = e.target;
         const photo = form.photo.value;
-        const name = form.name.value;
+        const brandName = form.brandName.value;
         const type = form.type.value;
         const price = form.price.value;
         const description = form.description.value;
         const rating = form.rating.value;
-        // console.log(photo, name, type, price, description, rating)
+        // console.log(photo, brandName, type, price, description, rating)
 
         const myData = {
-            photo,name,type,price,description,rating
+            photo,brandName,type,price,description,rating
         }
         console.log(myData)
 
@@ -46,7 +46,7 @@ const AddProduct = () => {
           <input
             className="input w-full"
             type="text"
-            name="name"
+            name="brandName"
             placeholder="Brand Name"
           />
         </div>

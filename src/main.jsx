@@ -11,6 +11,8 @@ import AddProduct from "./pages/AddProduct";
 import MyCart from "./pages/MyCart";
 
 import React from "react";
+import Products from "./components/products/Products";
+import BrandsCategory from "./components/Brands/BrandsCategory";
 
 
 const router = createBrowserRouter([
@@ -27,6 +29,15 @@ const router = createBrowserRouter([
       {
         path: '/products',
         element: <AddProduct></AddProduct>
+      },
+      {
+        path: '/brands',
+        element: <BrandsCategory></BrandsCategory>
+      },
+      {
+        path: '/products/:brandName',
+        element: <Products></Products>,
+        loader: () => fetch('http://localhost:5000/products')
       },
       {
         path: '/myCart',

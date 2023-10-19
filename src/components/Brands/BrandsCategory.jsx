@@ -1,7 +1,10 @@
+import { Link,  } from "react-router-dom";
+
 const BrandsCategory = ({ brands }) => {
  
+  
 
-  console.log(brands);
+  // console.log(brands);
 
   return (
     <div>
@@ -18,7 +21,9 @@ const BrandsCategory = ({ brands }) => {
               />
             </figure>
             <div className="card-body bg-red-100">
-              <h2 className="btn btn-ghost card-title font-bold">{brand.brandName}</h2>
+             <Link to={`/products/${brand.brandName}`}>
+             <h2 className="btn btn-ghost card-title font-bold">{brand.brandName}</h2>
+             </Link>
             </div>
           </div>
         </div>
