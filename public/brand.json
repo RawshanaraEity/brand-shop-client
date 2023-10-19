@@ -7,14 +7,15 @@
       },
       {
         "id": 2,
-        "brandName": "McDonald's",
-        "brandImg": "https://i.ibb.co/XZ44P2V/maclogo2.jpg"
-      },
-      {
-        "id": 3,
         "brandName": "Starbucks",
         "brandImg": "https://i.ibb.co/YXX9Pp0/starbucks-Brand.png"
       },
+      {
+        "id": 3,
+        "brandName": "McDonald's",
+        "brandImg": "https://i.ibb.co/XZ44P2V/maclogo2.jpg"
+      },
+     
       {
         "id": 4,
         "brandName": "PepsiCo",
@@ -22,14 +23,15 @@
       },
       {
         "id": 5,
-        "brandName": "Nestlé",
-        "brandImg": "https://i.ibb.co/d6qP8pj/nestle-Brand.jpg"
+        "brandName": "Kellogg's",
+        "brandImg": "https://i.ibb.co/PFX9Tcg/kelloggs-Brand.jpg"
       },
       {
         "id": 6,
-        "brandName": "Kellogg's",
-        "brandImg": "https://i.ibb.co/PFX9Tcg/kelloggs-Brand.jpg"
+        "brandName": "Nestlé",
+        "brandImg": "https://i.ibb.co/d6qP8pj/nestle-Brand.jpg"
       }
+     
     ]
   
    
