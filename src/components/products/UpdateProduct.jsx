@@ -45,8 +45,8 @@ const UpdateProduct = () => {
         <h2 className="text-center text-5xl text-white font-semibold">Update Products</h2>
         </div>
         <div className="bg-red-100">
-        <form onSubmit={handleUpdateProduct} className="space-y-5  md:w-3/4 lg:w-2/3 mx-auto py-10">
-          <div className="flex gap-5">
+        <form onSubmit={handleUpdateProduct} className="md:space-y-5 px-5 md:px-0 md:w-3/4 lg:w-2/3 mx-auto py-10">
+          <div className="flex flex-col md:flex-row gap-5">
             <input
               className="input w-full"
               type="text"
@@ -63,7 +63,7 @@ const UpdateProduct = () => {
             />
           </div>
           <br />
-          <div className="flex gap-5">
+          <div className="flex flex-col md:flex-row gap-5">
             <input
               className="input w-full"
               type="text"
@@ -80,7 +80,7 @@ const UpdateProduct = () => {
             />
           </div>
           <br />
-          <div className="flex gap-5">
+          <div className="flex flex-col md:flex-row gap-5">
             <input
               className="input w-full"
               type="text"

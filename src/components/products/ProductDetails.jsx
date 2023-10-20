@@ -35,9 +35,9 @@ const ProductDetails = () => {
 
 
     return (
-        <div>
+        <div className="py-10">
             {
-                <div className="card w-2/4 mx-auto  bg-base-100 shadow-xl">
+                <div className="card w-full md:w-2/4 mx-auto  bg-base-100 shadow-xl">
                 <figure>
                   <img
                   className="h-72 w-full"

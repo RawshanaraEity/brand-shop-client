@@ -69,9 +69,12 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <div className="flex flex-col-reverse items-center gap-2 normal-case text-red-600 font-bold text-xl">BiteOfTheBrands
+          <div className="flex flex-col-reverse ml-12 md:ml-60 lg:ml-0 items-center gap-2 normal-case text-red-600 font-bold text-xl">
+            <h2>BiteOfTheBrands</h2>
           <div>
-          <img className="h-16 w-16 rounded-full shadow-md shadow-slate-400" src="https://i.ibb.co/6gZnXyx/riku-lu-Bna-VH8mclsc-unsplash.jpg" alt="" /></div></div>
+          <img className="h-16 w-16 rounded-full shadow-md shadow-slate-400" src="https://i.ibb.co/6gZnXyx/riku-lu-Bna-VH8mclsc-unsplash.jpg" alt="" />
+          </div>
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
