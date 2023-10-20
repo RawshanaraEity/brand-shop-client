@@ -33,9 +33,12 @@ const AddProduct = () => {
 
 
   return (
-    <div className="py-5 bg-red-100">
-      <h2 className="text-center text-5xl font-semibold">Add More Products</h2>
-      <form onSubmit={handleAddProduct} className="space-y-5 md:w-3/4 lg:w-2/3 mx-auto py-10">
+    <div className=" ">
+      <div className="bg-red-600 py-10">
+      <h2 className="text-center text-5xl text-white font-semibold">Add More Products</h2>
+      </div>
+      <div className="bg-red-100">
+      <form onSubmit={handleAddProduct} className="space-y-5  md:w-3/4 lg:w-2/3 mx-auto py-10">
         <div className="flex gap-5">
           <input
             className="input w-full"
@@ -85,6 +88,7 @@ const AddProduct = () => {
         <input className="btn bg-red-500 text-white" type="submit" value="Add Product" />
         </div>
       </form>
+      </div>
     </div>
   );
 };

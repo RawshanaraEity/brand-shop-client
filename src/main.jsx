@@ -14,6 +14,7 @@ import React from "react";
 import Products from "./components/products/Products";
 import BrandsCategory from "./components/Brands/BrandsCategory";
 import ProductDetails from "./components/products/ProductDetails";
+import UpdateProduct from "./components/products/UpdateProduct";
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,7 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home></Home>,
         loader: () => fetch('/brand.json')
+        
       },
       {
         path: '/products',
@@ -34,20 +36,27 @@ const router = createBrowserRouter([
       {
         path: '/brands',
         element: <BrandsCategory></BrandsCategory>
+        
       },
       {
-        path: '/products/:brandName',
+        path: '/product/:brandName',
         element: <Products></Products>,
         loader: () => fetch('http://localhost:5000/products')
       },
       {
-        path: '/product/:id',
+        path: 'products/:id',
         element: <ProductDetails></ProductDetails>,
         loader: () => fetch('http://localhost:5000/products')
       },
       {
+        path: '/update/:id',
+        element: <UpdateProduct></UpdateProduct>,
+        loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+      },
+      {
         path: '/myCart',
-        element: <MyCart></MyCart>
+        element: <MyCart></MyCart>,
+        loader: () =>fetch('http://localhost:5000/myCart')
       },
       {
         path: '/login',

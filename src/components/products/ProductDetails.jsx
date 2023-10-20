@@ -11,7 +11,10 @@ const ProductDetails = () => {
         (product) => product._id === id
       );
 
-    //   console.log(singleProduct);
+    const { photo,name,brandName,type,price,rating} = singleProduct
+
+    const myProduct = {photo, name, brandName, type, price, rating}
+      // console.log(singleProduct);
 
       const handleAddToCart = () =>{
        
@@ -21,7 +24,7 @@ const ProductDetails = () => {
             headers: {
                 'content-type': 'application/json'
             },
-            body: JSON.stringify(singleProduct)
+            body: JSON.stringify(myProduct)
             
         })
         .then(res => res.json())
@@ -55,7 +58,7 @@ const ProductDetails = () => {
                   </div>
                   <div className="card-actions justify-end">
                     
-                    <div onClick={handleAddToCart} className="btn bg-red-600 text-white font-bold">Add too cart</div>
+                    <div onClick={handleAddToCart} className="btn bg-red-600 text-white font-bold">Add to cart</div>
                    
                   </div>
                 </div>
