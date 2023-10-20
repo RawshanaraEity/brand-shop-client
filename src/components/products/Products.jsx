@@ -38,7 +38,7 @@ const Products = () => {
                             {brandProducts.name}
                             <div className="badge bg-red-600 text-white">{brandProducts.brandName}</div>
                           </h2>
-                          <p className="text-lg font-semibold">Type Of This Product: {brandProducts.type} </p>
+                          <p className="text-lg font-semibold">Type: {brandProducts.type} </p>
                           <div className="flex w-56">
                               <p className="font-bold">Price: ${brandProducts.price} </p>
                               <p className="font-bold">Rating: {brandProducts.rating} </p>
