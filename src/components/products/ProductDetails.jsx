@@ -8,13 +8,26 @@ const ProductDetails = () => {
     // console.log(id);
 
     const singleProduct = products.find(
-        (product) => product._id !== id
+        (product) => product._id === id
       );
 
     //   console.log(singleProduct);
 
       const handleAddToCart = () =>{
-        console.log('add');
+       
+
+        fetch('http://localhost:5000/myCart', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(singleProduct)
+            
+        })
+        .then(res => res.json())
+        .then(data =>{
+            console.log(data)
+        })
       }
 
 
@@ -41,9 +54,9 @@ const ProductDetails = () => {
                       <p className="font-bold">Rating: {singleProduct.rating} </p>
                   </div>
                   <div className="card-actions justify-end">
-                    <Link>
+                    
                     <div onClick={handleAddToCart} className="btn bg-red-600 text-white font-bold">Add too cart</div>
-                    </Link>
+                   
                   </div>
                 </div>
               </div>
