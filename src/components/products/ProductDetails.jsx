@@ -1,4 +1,5 @@
-import { Link, useLoaderData, useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const ProductDetails = () => {
 
@@ -30,6 +31,14 @@ const ProductDetails = () => {
         .then(res => res.json())
         .then(data =>{
             console.log(data)
+            if(data.acknowledged){
+              Swal.fire({
+                title: 'Success',
+                text: 'Add To Cart Successfully',
+                icon: 'success',
+                confirmButtonText: 'Cool'
+              })
+            }
         })
       }
 

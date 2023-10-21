@@ -52,7 +52,7 @@ const Footer = () => {
       </footer>
       <footer className="footer footer-center p-4 bg-red-600 text-white">
         <aside>
-          <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
+          <p>Copyright © 2023 - All right reserved by biteOfBrands Industries Ltd</p>
         </aside>
       </footer>
     </div>

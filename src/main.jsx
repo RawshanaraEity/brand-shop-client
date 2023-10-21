@@ -17,6 +17,8 @@ import ProductDetails from "./components/products/ProductDetails";
 import UpdateProduct from "./components/products/UpdateProduct";
 
 
+
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -72,9 +74,12 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-   
-     <RouterProvider router={router} />
   
-    
+  {/* <AuthProvider>
+  
+  </AuthProvider> */}
+
+  <RouterProvider router={router} />
+
   </React.StrictMode>
 );
