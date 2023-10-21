@@ -1,8 +1,12 @@
-# React + Vite
+# BiteOfTheBrands
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+<!-- ## [Website live link](https://social-events-management-a40ca.web.app/) -->
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<!-- Click here for the projects live link: [https://social-events-management-a40ca.web.app/](https://social-events-management-a40ca.web.app/) -->
+
+* In our website we will give you worlds top brands food and bevarage.
+* You can visit top six food and bevarage brands available products.
+* You can update your products.
+* You can also add more products in add products section.
+* You can add your favourite products in your cart and also remove.

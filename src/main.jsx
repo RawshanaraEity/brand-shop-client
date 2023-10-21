@@ -15,6 +15,7 @@ import Products from "./components/products/Products";
 import BrandsCategory from "./components/Brands/BrandsCategory";
 import ProductDetails from "./components/products/ProductDetails";
 import UpdateProduct from "./components/products/UpdateProduct";
+import AuthProvider from "./Provider/AuthProvider";
 
 
 
@@ -75,11 +76,10 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
   
-  {/* <AuthProvider>
-  
-  </AuthProvider> */}
-
+  <AuthProvider>
   <RouterProvider router={router} />
+  </AuthProvider>
+
 
   </React.StrictMode>
 );

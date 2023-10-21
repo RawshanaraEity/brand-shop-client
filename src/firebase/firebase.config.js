@@ -1,16 +1,22 @@
 
 import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
+
+
+const all = import.meta.env;
+
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyCspkVCHYbtIoCnkxeF7MkKLA90NyBtd4M",
-  authDomain: "my-brand-client.firebaseapp.com",
-  projectId: "my-brand-client",
-  storageBucket: "my-brand-client.appspot.com",
-  messagingSenderId: "169590055807",
-  appId: "1:169590055807:web:51f0813fd5bb383945304a"
+  apiKey:all.VITE_apiKey,
+  authDomain:all.VITE_authDomain,
+  projectId:all.VITE_projectId,
+  storageBucket:all.VITE_storageBucket,
+  messagingSenderId:all.VITE_messagingSenderId,
+  appId:all.VITE_appId,
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export default app;
+const auth = getAuth(app)
+export default auth;

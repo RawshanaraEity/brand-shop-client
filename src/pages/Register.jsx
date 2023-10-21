@@ -1,43 +1,48 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import SocialLogin from "../components/SocialLogin";
-
-
+import { useContext } from "react";
+import swal from "sweetalert";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const Register = () => {
-  // const {createUser} = useContext(AuthContext)
+  const { createUser } = useContext(AuthContext);
+  const navigate = useNavigate();
 
-  const handleRegister = (e) =>{
-    e.preventDefault()
+  const handleRegister = (e) => {
+    e.preventDefault();
     const name = e.target.name.value;
     const email = e.target.email.value;
     const photo = e.target.photo.value;
     const password = e.target.password.value;
-    console.log(email,name,password,photo)
+    console.log(email, name, password, photo);
 
     // validation
-   
-        // create user
-    // createUser(email,password)
-    // .then(result => {
-       
-    //     console.log(result.user)
-    // })
-    // .catch(error => console.log(error))
-    
+    if(!/^(?=.*[A-Z])(?=.*[!@#$%^&*()_+{}\[\]:;<>,.?~\\/-]).{6,}$/.test(password)){
+      swal("Oops!", "Plz type Minimum six characters, at least one capital letter and one special charecter", "error")
   }
-
-
-
+     else {
+      // create user
+      createUser(email, password)
+        .then((result) => {
+          navigate("/");
+          console.log(result.user);
+        })
+        .catch((error) => console.log(error));
+      swal("Wow", "Successfully Registered", "success");
+    }
+  };
 
   return (
     <div>
-       <div>
       <div>
-        <h2 className="text-3xl my-10 text-center">Please Register</h2>
+        <div>
+          <h2 className="text-3xl my-10 text-center">Please Register</h2>
 
-        <form onSubmit={handleRegister} className="md:w-3/4 lg:w-1/3 mx-auto px-5">
-
-        <div className="form-control">
+          <form
+            onSubmit={handleRegister}
+            className="md:w-3/4 lg:w-1/3 mx-auto px-5"
+          >
+            <div className="form-control">
               <label className="label">
                 <span className="label-text">Name</span>
               </label>
@@ -50,19 +55,19 @@ const Register = () => {
               />
             </div>
 
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Email</span>
-            </label>
-            <input
-              type="email"
-              placeholder="email"
-              name="email"
-              className="input input-bordered"
-              required
-            />
-          </div>
-          <div className="form-control">
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Email</span>
+              </label>
+              <input
+                type="email"
+                placeholder="email"
+                name="email"
+                className="input input-bordered"
+                required
+              />
+            </div>
+            <div className="form-control">
               <label className="label">
                 <span className="label-text">Photo Url</span>
               </label>
@@ -74,36 +79,41 @@ const Register = () => {
                 required
               />
             </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text">Password</span>
-            </label>
-            <input
-              type="password"
-              placeholder="password"
-              name="password"
-              className="input input-bordered"
-              required
-            />
-            <label className="label">
-              <a href="#" className="label-text-alt link link-hover">
-                Forgot password?
-              </a>
-            </label>
-          </div>
-          <div className="form-control mt-6">
-            <button className="btn bg-red-600 text-white" type="submit">Login</button>
-          </div>
-        </form>
-        <p className="text-center mt-4">
-          Already have an account ? Please{" "}
-          <Link to="/login"  className="text-blue-600 font-semibold" >
-            Login
-          </Link>
-        </p>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text">Password</span>
+              </label>
+              <input
+                type="password"
+                placeholder="password"
+                name="password"
+                className="input input-bordered"
+                required
+              />
+              <label className="label">
+                <a href="#" className="label-text-alt link link-hover">
+                  Forgot password?
+                </a>
+              </label>
+            </div>
+            <div className="form-control mt-6">
+              <button className="btn bg-red-600 text-white" type="submit">
+                Login
+              </button>
+            </div>
+          </form>
+          <p className="text-center mt-4">
+            Already have an account ? Please{" "}
+            <Link to="/login" className="text-blue-600 font-semibold">
+              Login
+            </Link>
+          </p>
+        </div>
+        <div className="flex justify-center">
+          {" "}
+          <SocialLogin></SocialLogin>
+        </div>
       </div>
-     <div className="flex justify-center"> <SocialLogin></SocialLogin></div>
-    </div>
     </div>
   );
 };
