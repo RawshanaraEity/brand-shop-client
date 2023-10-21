@@ -73,8 +73,8 @@ const AddProduct = () => {
           <input
             className="input w-full"
             type="text"
-            name="description"
-            placeholder="Description"
+            name="name"
+            placeholder="Name"
           />
           <input
             className="input w-full"
@@ -84,6 +84,13 @@ const AddProduct = () => {
           />
         </div>
         <br />
+        <input
+            className="input w-full"
+            type="text"
+            name="description"
+            placeholder="Description"
+          />
+          <br />
         <div className="text-center">
         <input className="btn bg-red-500 text-white" type="submit" value="Add Product" />
         </div>
