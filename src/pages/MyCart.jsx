@@ -33,7 +33,7 @@ const handleRemove = (id) =>{
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-5 px-5 lg:px-0 my-10">
           {updatedProducts.map((product) => (
             <div key={product._id}>
-              <div className="card grid grid-cols-2 lg:card-side bg-red-100 shadow-xl">
+              <div className="card grid grid-cols-2 lg:card-side border-2 border-red-600 shadow-xl">
                 <figure>
                   <img
                     className="h-72 w-full"

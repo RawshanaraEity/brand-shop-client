@@ -8,7 +8,7 @@ const Banner = () => {
             "url(https://i.ibb.co/rxfRrFL/karsten-winegeart-CZt-K-E89omo-unsplash.jpg)",
         }}
       >
-        <div className="hero-overlay bg-opacity-70"></div>
+        <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-xl">
             <h1 className="mb-5 text-5xl font-bold">

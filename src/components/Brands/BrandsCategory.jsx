@@ -21,7 +21,7 @@ const BrandsCategory = ({brands}) => {
                 alt="brand"
               />
             </figure>
-            <div className="card-body bg-red-100">
+            <div className="card-body rounded-b-xl bg-red-100">
              <Link to={`/product/${brand.brandName}`}>
              <h2 className="text-2xl text-center text-black font-bold">{brand.brandName}</h2>
              </Link>

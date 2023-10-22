@@ -44,18 +44,18 @@ const UpdateProduct = () => {
         <div className="bg-red-600 py-10">
         <h2 className="text-center text-5xl text-white font-semibold">Update Products</h2>
         </div>
-        <div className="bg-red-100">
+        <div className="">
         <form onSubmit={handleUpdateProduct} className="md:space-y-5 px-5 md:px-0 md:w-3/4 lg:w-2/3 mx-auto py-10">
           <div className="flex flex-col md:flex-row gap-5">
             <input
-              className="input w-full"
+              className="input w-full input-bordered"
               type="text"
               name="photo"
               defaultValue={photo}
               placeholder="Image"
             />
             <input
-              className="input w-full"
+              className="input w-full input-bordered"
               type="text"
               name="name"
               defaultValue={name}
@@ -65,14 +65,14 @@ const UpdateProduct = () => {
           <br />
           <div className="flex flex-col md:flex-row gap-5">
             <input
-              className="input w-full"
+              className="input w-full input-bordered"
               type="text"
               name="type"
               defaultValue={type}
               placeholder="Category Type"
             />
             <input
-              className="input w-full"
+              className="input w-full input-bordered"
               type="text"
               name="price"
               defaultValue={price}
@@ -82,14 +82,14 @@ const UpdateProduct = () => {
           <br />
           <div className="flex flex-col md:flex-row gap-5">
             <input
-              className="input w-full"
+              className="input w-full input-bordered"
               type="text"
               name="brandName"
               defaultValue={brandName}
               placeholder="Brand Name"
             />
             <input
-              className="input w-full"
+              className="input w-full input-bordered"
               type="text"
               name="rating"
               defaultValue={rating}
@@ -98,7 +98,7 @@ const UpdateProduct = () => {
           </div>
           <br />
           <div className="text-center">
-          <input className="btn bg-red-500 text-white" type="submit" value="Submit" />
+          <input className="btn bg-red-600 text-white" type="submit" value="Submit" />
           </div>
         </form>
         </div>
