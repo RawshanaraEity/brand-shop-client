@@ -47,28 +47,28 @@ const router = createBrowserRouter([
       {
         path: '/product/:brandName',
         element: <Products></Products>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-shop-server-p7v34gajg-rawshanaras-projects.vercel.app/products')
       },
       {
         path: 'products/:id',
         element: <PrivateRoute>
           <ProductDetails></ProductDetails>
         </PrivateRoute>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://brand-shop-server-p7v34gajg-rawshanaras-projects.vercel.app/products')
       },
       {
         path: '/update/:id',
         element: <PrivateRoute>
           <UpdateProduct></UpdateProduct>
         </PrivateRoute> ,
-        loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({params}) => fetch(`https://brand-shop-server-p7v34gajg-rawshanaras-projects.vercel.app/products/${params.id}`)
       },
       {
         path: '/myCart',
         element: <PrivateRoute>
           <MyCart></MyCart>
         </PrivateRoute> ,
-        loader: () =>fetch('http://localhost:5000/myCart')
+        loader: () =>fetch('https://brand-shop-server-p7v34gajg-rawshanaras-projects.vercel.app/myCart')
       },
       {
         path: '/login',

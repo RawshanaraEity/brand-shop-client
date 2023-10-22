@@ -9,7 +9,7 @@ const [updatedProducts, setUpdatedProducts] = useState(cartProducts)
 
 const handleRemove = (id) =>{
         console.log(id)
-        fetch(`http://localhost:5000/myCart/${id}`, {
+        fetch(`https://brand-shop-server-p7v34gajg-rawshanaras-projects.vercel.app/myCart/${id}`, {
 
             method: 'DELETE',
         })
